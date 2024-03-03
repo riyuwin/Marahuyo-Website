@@ -65,8 +65,8 @@
                 <h3 class="card-title front_yellow_text">START YOUR ENCHANTING JOURNEY WITH US</h3>
                 <h5 class="card-title" style="color: #f4e8dc; font-weight: 400; font-size: 20px; margin-bottom: 5%">Gabay sa Noon at sa Ngayon</h5> 
 
-                <button class="btn btn-light btn-lg btn-front" style="border-radius: 25px;"><a href="login_form.php" class="btn-text">Login</a></button>
-<button class="btn btn-light btn-lg btn-front" style="border-radius: 25px;"><a href="register_form.php" class="btn-text">Register</a></button>
+                <button class="btn btn-light btn-lg btn-front" style="border-radius: 25px;"><a href="login_form.php" class="btn-text">Get Started</a></button>
+                <button class="btn btn-light btn-lg btn-front" style="border-radius: 25px;"><a href="register_form.php" class="btn-text">Learn More</a></button>
             </div>
         </div>
     </div> 

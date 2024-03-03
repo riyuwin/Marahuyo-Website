@@ -59,20 +59,150 @@
       </nav>
 
       <div class="container my-5">
-        <div class="card" style="width: 100%;">
-            <div class="card-body"> 
-                <h5 class="card-title">Welcome to the site <?php if(isset($_SESSION['email'])){
-                  echo $_SESSION['fname']; }  ?>!</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>  
-                <button class="btn btn-primary"><a href="login_form.php" style="color: white; text-decoration: none;">Login</a></button>
-                <button class="btn btn-primary"><a href="register_form.php" style="color: white; text-decoration: none;">Register</a></button>       
+            <div class="trip-container-header">
+                LOCAL MUSUEM & GALLERY TOUR
             </div>
-          </div>
-      </div>
 
+            <div class="row">
 
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <a href="trip_details.php?trip=lakbay_kinaadman" class="container_selector">
+                    <div class="card mt-3">
+                        <img src="images/museum.jpg" class="card-img-top " alt="..." style="height: 140px">
+                        <div class="card-trip card-body">
+                            <h6>Lakbay Kinaadman</h6>
+                            <p style="text-align: center">5-Day Tour</p><br>
+                            <h6>PHP 1,850</h6> 
+                            
+                            <div class="container-best-price">
+                                Best Price Guaranteed
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
 
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <a href="trip_details.php?trip=lakbay_maharlika" class="container_selector">
+                        <div class="card mt-3">
+                            <img src="images/bg2.jpg" class="card-img-top " alt="..." style="height: 140px">
+                            <div class="card-trip card-body">
+                                <h6>Lakbay Maharlika</h6>
+                                <p style="text-align: center">5-Day Tour</p><br>
+                                <h6>PHP 3,500</h6> 
+                                
+                                <div class="container-best-price">
+                                    Best Price Guaranteed
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <a href="trip_details.php" class="container_selector">
+                        <div class="card mt-3">
+                            <img src="images/museum.jpg" class="card-img-top " alt="..." style="height: 140px">
+                            <div class="card-trip card-body">
+                                <h6>Lakbay Gunita</h6> 
+                                <p style="text-align: center">5-Day Tour</p><br>
+                                <h6>PHP 2,300</h6> 
+                                
+                                <div class="container-best-price">
+                                    Best Price Guaranteed
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                    
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <a href="trip_details.php" class="container_selector">
+                    <div class="card mt-3">
+                        <img src="images/bg2.jpg" class="card-img-top " alt="..." style="height: 140px">
+                        <div class="card-trip card-body">
+                            <h6>Lakbay Yugto</h6>
+                            <p style="text-align: center">5-Day Tour</p><br>
+                            <h6>PHP 1,700</h6> 
+                            
+                            <div class="container-best-price">
+                                Best Price Guaranteed
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <a href="trip_details.php" class="container_selector">
+                    <div class="card mt-3">
+                        <img src="images/museum.jpg" class="card-img-top " alt="..." style="height: 140px">
+                        <div class="card-trip card-body">
+                            <h6>Lakbay Sansinukob</h6>
+                            <p style="text-align: center">5-Day Tour</p><br>
+                            <h6>PHP 1,100</h6> 
+                            
+                            <div class="container-best-price">
+                                Best Price Guaranteed
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <a href="trip_details.php" class="container_selector">
+                    <div class="card mt-3">
+                        <img src="images/bg2.jpg" class="card-img-top " alt="..." style="height: 140px">
+                        <div class="card-trip card-body">
+                            <h6>Lakbay Silakbo</h6>
+                            <p style="text-align: center">5-Day Tour</p><br>
+                            <h6>PHP 2,200</h6> 
+                            
+                            <div class="container-best-price">
+                                Best Price Guaranteed
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <a href="trip_details.php" class="container_selector">
+                    <div class="card mt-3">
+                        <img src="images/museum.jpg" class="card-img-top " alt="..." style="height: 140px">
+                        <div class="card-trip card-body">
+                            <h6>Lakbay Hiwaga</h6>
+                            <p style="text-align: center">5-Day Tour</p><br>
+                            <h6>PHP 3,700</h6> 
+                            
+                            <div class="container-best-price">
+                                Best Price Guaranteed
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <a href="trip_details.php" class="container_selector">
+                    <div class="card mt-3">
+                        <img src="images/bg2.jpg" class="card-img-top " alt="..." style="height: 140px">
+                        <div class="card-trip card-body">
+                            <h6>Lakbay Alpas</h6>
+                            <p style="text-align: center">5-Day Tour</p><br>
+                            <h6>PHP 4,000</h6> 
+                            
+                            <div class="container-best-price">
+                                Best Price Guaranteed
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div>    
+        </div>
+ 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 </body>
