@@ -115,3 +115,8 @@ nav ul {
 .container_selector:hover{
     text-decoration: none; 
 }
+
+.trip_img{
+    width: 20%;
+    height: 20%;
+}

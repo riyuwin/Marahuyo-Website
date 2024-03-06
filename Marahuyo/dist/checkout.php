@@ -68,8 +68,7 @@
 
 
       <div class="container my-5"> 
-        
-            <?php if(isset($_GET['trip']) && $_GET['trip'] == "lakbay_kinaadman"): ?>
+         
  
             <div class="row" >
                 <div class="col-md-3 mx-auto">
@@ -81,7 +80,7 @@
                 <div class="col-md-3 mx-auto">
                     <div class="card" style="background-color: transparent; color: white">
                             <span><h1>LAKBAY<br>KINAADMAN</h1></span><br>
-                            <h6 style="font-size: 25px;">PHP 1,850.00</h6><br> 
+                            <h6 style="font-size: 25px;">PHP <?php echo $_GET['price']; ?></h6><br> 
                         </div>
                 </div>
 
@@ -94,45 +93,101 @@
                             <div class="col-md-4">
                                 <button class="btn btn-primary" onclick="incrementQuantity()">+</button>
                                 <button class="btn btn-primary" onclick="decrementQuantity()">-</button>
-                            </div> 
-
-                            
+                            </div>  
                             <div class="col-md-4">
-                                <p class="card-text">PHP 1,000</span></p>
+                                <p class="card-text" id="subtotalPrice"><?php echo $_GET['price']; ?></p>
                             </div> 
 
+                            <br><hr><br><br><br><br><br>
 
-                            <script>
-                                function incrementQuantity() {
-                                    var quantityElement = document.getElementById('quantity');
-                                    var currentQuantity = parseInt(quantityElement.textContent);
-                                    quantityElement.textContent = currentQuantity + 1;
-                                }
-
-                                function decrementQuantity() {
-                                    var quantityElement = document.getElementById('quantity');
-                                    var currentQuantity = parseInt(quantityElement.textContent);
-                                    quantityElement.textContent = currentQuantity - 1;
-                                }
-                            </script>  
-                        </div>
-
-                        <br><hr><br>
-
+                            <div class="col-md-4">
+                                <p class="card-text">Subtotal  </span></p>
+                            </div> 
+                            <div class="col-md-4"> 
+                            </div>  
+                            <div class="col-md-4">
+                                <p class="card-text" id="TotalsubtotalPrice"><?php echo $_GET['price']; ?></p>
+                            </div>  
+                        </div> 
+                        <br><hr><br> 
                         <div class="row">
                             <div class="col-md-12">
-                                <a href="#" class="btn btn-success btn-block">Checkout</a>
+                                <a id="checkoutLink" href="#" class="btn btn-success btn-block">Checkout</a>
                             </div>
-                        </div>
-        
+                        </div> 
                     </div>
-                </div>
+                </div> 
 
+                <br><hr><br> 
+                
             </div>
-             
-            <?php endif; ?>
-        </div>    
-    </div>
+              
+
+
+            <script> 
+ 
+
+                function incrementQuantity() {
+                    var realPrice = <?php echo isset($_GET['price']) ? json_encode($_GET['price']) : '0'; ?>;
+                    var quantityElement = document.getElementById('quantity');
+                    var subtotalPriceElement = document.getElementById('subtotalPrice');
+                    var TotalsubtotalPrice = document.getElementById('TotalsubtotalPrice');
+                    var currentQuantity = parseInt(quantityElement.textContent);
+
+                    quantityElement.textContent = currentQuantity + 1;
+
+                    // Corrected subtotal calculation
+                    var subtotal = realPrice * (currentQuantity + 1);
+                    subtotalPriceElement.textContent = subtotal;
+                    TotalsubtotalPrice.textContent = subtotal;
+
+                    total_subtotal = subtotal;
+                }
+
+                function decrementQuantity() {
+                    var realPrice = <?php echo isset($_GET['price']) ? json_encode($_GET['price']) : '0'; ?>;
+                    var quantityElement = document.getElementById('quantity');
+                    var subtotalPriceElement = document.getElementById('subtotalPrice');
+                    var TotalsubtotalPrice = document.getElementById('TotalsubtotalPrice');
+                    var currentQuantity = parseInt(quantityElement.textContent);
+
+                    // Check if the current quantity is greater than 1 to avoid negative quantities
+                    if (currentQuantity > 1) {
+                        quantityElement.textContent = currentQuantity - 1;
+
+                        // Corrected subtotal calculation
+                        var subtotal = realPrice * (currentQuantity - 1);
+                        subtotalPriceElement.textContent = subtotal;
+                        TotalsubtotalPrice.textContent = subtotal;
+ 
+                    }
+                }
+
+                document.addEventListener('DOMContentLoaded', function() {
+                    var subtotalPriceElement = document.getElementById('TotalsubtotalPrice');
+                    var subtotalValue = subtotalPriceElement.textContent.trim(); 
+                });
+
+                
+                var checkoutLink = document.getElementById('checkoutLink');
+        
+                // Event listener kapag pinindot ang checkoutLink
+                checkoutLink.addEventListener('click', function(event) {
+                    event.preventDefault(); // Ito ay upang pigilan ang default na aksyon ng link (i.e., ang pagpunta sa ibang page)
+                    
+                    var subtotalPriceElement = document.getElementById('TotalsubtotalPrice');
+                    var subtotalValue = subtotalPriceElement.textContent.trim(); 
+                    // I-set ang tamang URL sa href attribute gamit ang kodigo na iyong ibinigay
+                    checkoutLink.href = "payment.php<?php echo isset($_GET['trip']) ? '?trip=' . urlencode($_GET['trip']) : ''; ?>&<?php echo isset($_GET['price']) ? 'price=' . urlencode($_GET['price']) : ''; ?>&subtotal=" + subtotalValue;
+                    
+                    // Pumunta sa page na nakalagay sa href attribute
+                    window.location.href = checkoutLink.href;
+                });
+
+                
+            </script>
+            </div>    
+        </div>
      
 
     <br><br><br>

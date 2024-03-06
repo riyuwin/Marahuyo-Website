@@ -1,6 +1,9 @@
 <?php
 
-  session_start();  
+session_start();
+
+$user_email = "{$_SESSION['email']}";
+ 
 
 ?>
 
@@ -13,6 +16,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </head>
 <body>
 
@@ -61,8 +65,27 @@
       <div class="container">
         <div class="row justify-content-end">
             <div class="col-auto">
-                <button type="button" class="btn btn-info">+ Add to Heart</button>
+                <button type="button" id="addToHeart" class="btn btn-info">+ Add to Heart</button>
             </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    document.getElementById('addToHeart').addEventListener('click', function() {
+                        Swal.fire({
+                            title: 'Add to Heart',
+                            text: 'Are you sure you want to add this item to your heart?',
+                            icon: 'question',
+                            showCancelButton: true,
+                            confirmButtonText: 'Yes, add it!',
+                            cancelButtonText: 'Cancel'
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                window.location.href = '../db_con/cart.php<?php echo isset($_GET['trip']) ? '?trip=' . $_GET['trip'] : ''; ?>&<?php echo isset($_GET['price']) ? 'price=' . $_GET['price'] : ''; ?>&email=<?php echo "$user_email"?>';
+                            }
+                        });
+                    });
+                });
+            </script> 
         </div>
     </div>
 
@@ -179,7 +202,7 @@
     
     <div class="container">
         <div class="row"> 
-            <a type="button" class="btn btn-info btn-block" href="checkout.php<?php echo isset($_GET['trip']) ? '?trip=' . $_GET['trip'] : ''; ?>">Book Now!</a> 
+            <a type="button" class="btn btn-info btn-block" href="checkout.php<?php echo isset($_GET['trip']) ? '?trip=' . $_GET['trip'] : ''; ?>&<?php echo isset($_GET['price']) ? 'price=' . $_GET['price'] : ''; ?>">Book Now!</a> 
         </div>
     </div> 
     <br><br><br>

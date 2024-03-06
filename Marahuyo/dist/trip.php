@@ -66,7 +66,7 @@
             <div class="row">
 
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <a href="trip_details.php?trip=lakbay_kinaadman" class="container_selector">
+                    <a href="trip_details.php?trip=lakbay_kinaadman&price=1850" class="container_selector">
                     <div class="card mt-3">
                         <img src="images/museum.jpg" class="card-img-top " alt="..." style="height: 140px">
                         <div class="card-trip card-body">
@@ -83,7 +83,7 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <a href="trip_details.php?trip=lakbay_maharlika" class="container_selector">
+                    <a href="trip_details.php?trip=lakbay_maharlika&price=3500" class="container_selector">
                         <div class="card mt-3">
                             <img src="images/bg2.jpg" class="card-img-top " alt="..." style="height: 140px">
                             <div class="card-trip card-body">
@@ -100,7 +100,7 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <a href="trip_details.php" class="container_selector">
+                    <a href="trip_details.php?trip=lakbay_gunita&price=2300" class="container_selector">
                         <div class="card mt-3">
                             <img src="images/museum.jpg" class="card-img-top " alt="..." style="height: 140px">
                             <div class="card-trip card-body">
@@ -117,7 +117,7 @@
                 </div>
                     
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <a href="trip_details.php" class="container_selector">
+                    <a href="trip_details.php?trip=lakbay_yugto&price=1700" class="container_selector">
                     <div class="card mt-3">
                         <img src="images/bg2.jpg" class="card-img-top " alt="..." style="height: 140px">
                         <div class="card-trip card-body">
@@ -134,7 +134,7 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <a href="trip_details.php" class="container_selector">
+                    <a href="trip_details.php?trip=lakbay_sansinukob&price=1100" class="container_selector">
                     <div class="card mt-3">
                         <img src="images/museum.jpg" class="card-img-top " alt="..." style="height: 140px">
                         <div class="card-trip card-body">
@@ -151,7 +151,7 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <a href="trip_details.php" class="container_selector">
+                    <a href="trip_details.php?trip=lakbay_silakbo&price=2200" class="container_selector">
                     <div class="card mt-3">
                         <img src="images/bg2.jpg" class="card-img-top " alt="..." style="height: 140px">
                         <div class="card-trip card-body">
@@ -168,7 +168,7 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <a href="trip_details.php" class="container_selector">
+                    <a href="trip_details.php?trip=lakbay_hiwaga&price=3700" class="container_selector">
                     <div class="card mt-3">
                         <img src="images/museum.jpg" class="card-img-top " alt="..." style="height: 140px">
                         <div class="card-trip card-body">
@@ -185,7 +185,7 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <a href="trip_details.php" class="container_selector">
+                    <a href="trip_details.php?trip=lakbay_alpas&price=4000" class="container_selector">
                     <div class="card mt-3">
                         <img src="images/bg2.jpg" class="card-img-top " alt="..." style="height: 140px">
                         <div class="card-trip card-body">
