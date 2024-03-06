@@ -231,7 +231,7 @@
                             'success'
                         ).then(() => {
                             // Redirect to PHP script to handle email sending
-                            window.location.href = '../db_con/payment.php<?php echo isset($_GET['trip']) ? '?trip=' . $_GET['trip'] : ''; ?>&<?php echo isset($_GET['price']) ? 'price=' . $_GET['price'] : ''; ?>&<?php echo isset($_GET['subtotal']) ? 'subtotal=' . $_GET['subtotal'] : ''; ?>';
+                            window.location.href = '../db_con/payment.php<?php echo isset($_GET['trip']) ? '?email=' . urlencode($_SESSION['email']) . '&trip=' . $_GET['trip'] : ''; ?>&<?php echo isset($_GET['price']) ? 'price=' . $_GET['price'] : ''; ?>&<?php echo isset($_GET['subtotal']) ? 'subtotal=' . $_GET['subtotal'] : ''; ?>';
                         });
                     }
                 });

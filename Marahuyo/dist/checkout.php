@@ -178,8 +178,8 @@
                     var subtotalPriceElement = document.getElementById('TotalsubtotalPrice');
                     var subtotalValue = subtotalPriceElement.textContent.trim(); 
                     // I-set ang tamang URL sa href attribute gamit ang kodigo na iyong ibinigay
-                    checkoutLink.href = "payment.php<?php echo isset($_GET['trip']) ? '?trip=' . urlencode($_GET['trip']) : ''; ?>&<?php echo isset($_GET['price']) ? 'price=' . urlencode($_GET['price']) : ''; ?>&subtotal=" + subtotalValue;
-                    
+                    checkoutLink.href = "payment.php<?php echo isset($_GET['trip']) ? '?email=' . urlencode($_SESSION['email']) . '&trip=' . urlencode($_GET['trip']) : ''; ?>&<?php echo isset($_GET['price']) ? 'price=' . urlencode($_GET['price']) : ''; ?>&subtotal=" + subtotalValue;
+                                        
                     // Pumunta sa page na nakalagay sa href attribute
                     window.location.href = checkoutLink.href;
                 });

@@ -17,8 +17,10 @@ $mail->Password = 'zqogncvjtqpojiya';
 $mail->SMTPSecure = 'ssl';
 $mail->Port = 465;
 
+$email_to = isset($_GET['email']) ? $_GET['email'] : '';
+
 $mail->setFrom('johnerwinalbos@gmail.com');
-$mail->addAddress('albosjohn0@gmail.com');
+$mail->addAddress($email_to);
 
 $price = isset($_GET['subtotal']) ? $_GET['subtotal'] : '';
 $trip = isset($_GET['trip']) ? $_GET['trip'] : '';
